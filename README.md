@@ -7,8 +7,13 @@ The `dotfiles` have been migrated from manual scripts to `chezmoi` for managing 
 Ensure following tools are installed before proceeding with the setup:
 
 ```
+# required tools
+git
 zsh
 neovim
+
+# make sure the default shell is switched to zsh
+chsh -s $(which zsh)
 ```
 
 ## Setup
@@ -16,5 +21,5 @@ neovim
 To initialize all configs on the new machine:
 
 ```shell
-chezmoi init --apply $GITHUB_USERNAME
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
 ```
