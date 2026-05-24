@@ -7,10 +7,11 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/) for syncing co
 - **zsh** — `oh-my-zsh` with the `ys` theme, `zsh-autosuggestions`, and `zsh-syntax-highlighting` plugins (auto-installed on first shell start). Includes safety aliases (`rm -I`, `cp -i`, `mv -i`), shortcuts, and `nvm` loader.
 - **git** — sane defaults (rebase on pull, autosquash, `zdiff3` conflict style, histogram diffs, `rerere`), handy aliases (`st`, `lg`, `wip`, `undo`, …), and includes `~/.gitconfig.local` for machine-specific overrides (e.g. user name/email).
 - **neovim** — Lua config bootstrapped with [lazy.nvim](https://github.com/folke/lazy.nvim) and the [tokyonight](https://github.com/folke/tokyonight.nvim) colorscheme (night variant, transparent background).
+- **ghostty** *(macOS only)* — Tokyonight theme, semi-transparent background with blur, block cursor, 100k scrollback, option-as-alt, and transparent titlebar.
 - **yabai** *(macOS only)* — bsp tiling layout, 11pt gaps/padding, `fn` as the mouse modifier.
 - **skhd** *(macOS only)* — hotkeys for iTerm, window float/zoom toggles, and space focus/move bindings (`cmd+alt+<n>`, `shift+cmd+<n>`).
 
-The macOS-only configs (`yabai`, `skhd`) are skipped automatically on other platforms via `.chezmoiignore`.
+The macOS-only configs (`ghostty`, `yabai`, `skhd`) are skipped automatically on other platforms via `.chezmoiignore`.
 
 ## Requirements
 
@@ -22,6 +23,7 @@ zsh
 neovim
 
 # optional, macOS only
+ghostty
 yabai
 skhd
 ```
