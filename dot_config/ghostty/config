@@ -14,7 +14,7 @@ window-decoration = true
 # Cursor
 cursor-style = block
 cursor-style-blink = true
-shell-integration-features = no-cursor,sudo,title
+shell-integration-features = no-cursor,sudo,title,ssh-env,ssh-terminfo
 
 # Scrollback
 scrollback-limit = 100000
