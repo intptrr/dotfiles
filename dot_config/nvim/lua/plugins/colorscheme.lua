@@ -1,11 +1,15 @@
 return {
-  -- kanagawa
   {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
-    priority = 1000,
+    "folke/tokyonight.nvim",
+    lazy = false,    -- Load this immediately on startup
+    priority = 1000, -- Make sure it loads before other plugins
     config = function()
-      vim.cmd([[colorscheme kanagawa]])
-    end
-  }
+      -- Optional: Ensure your terminal background remains transparent 
+      -- if you configured background-opacity in Ghostty
+      require("tokyonight").setup({ transparent = true })
+
+      -- Set the variant
+      vim.cmd([[colorscheme tokyonight-night]])
+    end,
+  },
 }
