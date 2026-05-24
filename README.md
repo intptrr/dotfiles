@@ -8,7 +8,8 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/) for syncing co
 - **git** — sane defaults (rebase on pull, autosquash, `zdiff3` conflict style, histogram diffs, `rerere`), handy aliases (`st`, `lg`, `wip`, `undo`, …), and includes `~/.gitconfig.local` for machine-specific overrides (e.g. user name/email).
 - **neovim** — Lua config bootstrapped with [lazy.nvim](https://github.com/folke/lazy.nvim) and the [tokyonight](https://github.com/folke/tokyonight.nvim) colorscheme (night variant, transparent background).
 - **ghostty** *(macOS only)* — Tokyonight theme, semi-transparent background with blur, block cursor, 100k scrollback, option-as-alt, and transparent titlebar.
-- **yabai** *(macOS only)* — bsp tiling layout, 11pt gaps/padding, `fn` as the mouse modifier.
+- **opencode** — [opencode](https://opencode.ai/) AI coding assistant config with LSP and formatter support, system theme TUI, and granular permission controls (read/search allowed, edit/bash require confirmation).
+- **yabai** *(macOS only)* — bsp tiling layout, 10pt gaps/padding, `fn` as the mouse modifier.
 - **skhd** *(macOS only)* — hotkeys for iTerm, window float/zoom toggles, and space focus/move bindings (`cmd+alt+<n>`, `shift+cmd+<n>`).
 
 The macOS-only configs (`ghostty`, `yabai`, `skhd`) are skipped automatically on other platforms via `.chezmoiignore`.
@@ -21,6 +22,9 @@ Install the following before applying the dotfiles:
 git
 zsh
 neovim
+
+# optional
+opencode
 
 # optional, macOS only
 ghostty
