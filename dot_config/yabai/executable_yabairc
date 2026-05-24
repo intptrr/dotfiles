@@ -21,6 +21,9 @@ yabai -m config window_gap     10
 # set mouse interaction modifier key (default: fn)
 yabai -m config mouse_modifier fn
 
+# focus the window under the cursor when it moves (default: off)
+yabai -m config focus_follows_mouse autofocus
+
 # set modifier + left-click drag to move window (default: move)
 yabai -m config mouse_action1 move
 
@@ -29,5 +32,14 @@ yabai -m config mouse_action2 resize
 
 # disable tiling for following apps
 yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^IINA$"            manage=off
+yabai -m rule --add app="^PicView$"         manage=off
+yabai -m rule --add app="^System Information$"  manage=off
+yabai -m rule --add app="^Finder$" title="(Copy|Move|Info|Preferences)" manage=off
+yabai -m rule --add app="^Calculator$"          manage=off
+yabai -m rule --add app="^Archive Utility$"     manage=off
+yabai -m rule --add app="^App Store$"           manage=off
+yabai -m rule --add app="^1Password$"           manage=off
+yabai -m rule --add app="^Raycast$"             manage=off
 
 echo "yabai configuration loaded.."
