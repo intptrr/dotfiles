@@ -10,20 +10,45 @@
     "edit": "ask",
     "bash": {
       "*": "ask",
+
+      // Filesystem inspection
       "ls": "allow",
       "ls *": "allow",
       "pwd": "allow",
       "cat *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "wc *": "allow",
+      "stat *": "allow",
+      "tree": "allow",
+      "tree *": "allow",
+      "realpath *": "allow",
+
+      // Search
       "rg": "allow",
       "rg *": "allow",
       "fd": "allow",
       "fd *": "allow",
       "find *": "allow",
-      "head *": "allow",
-      "tail *": "allow",
-      "wc *": "allow",
-      "tree": "allow",
-      "tree *": "allow",
+      "grep *": "allow",
+
+      // Text inspection
+      "echo *": "allow",
+      "sort *": "allow",
+      "uniq *": "allow",
+      "awk *": "allow",
+      "sed -n *": "allow",
+      "diff *": "allow",
+      "jq *": "allow",
+
+      // Environment / system info
+      "env": "allow",
+      "printenv *": "allow",
+      "which *": "allow",
+      "command -v *": "allow",
+      "type *": "allow",
+
+      // Git read-only
       "git status": "allow",
       "git status *": "allow",
       "git log": "allow",
@@ -34,13 +59,21 @@
       "git show *": "allow",
       "git branch": "allow",
       "git branch *": "allow",
-      "git remote": "allow",
-      "git remote *": "allow",
+      "git remote -v": "allow",
       "git blame *": "allow",
       "git rev-parse *": "allow",
       "git config --get *": "allow",
       "git ls-files": "allow",
-      "git ls-files *": "allow"
+      "git ls-files *": "allow",
+      "git tag": "allow",
+      "git stash list": "allow",
+
+      // Package manager read-only
+      "npm ls *": "allow",
+      "npm view *": "allow",
+      "pnpm ls *": "allow",
+      "pip show *": "allow",
+      "cargo tree": "allow"
     },
     "webfetch": "allow",
     "websearch": "allow"
