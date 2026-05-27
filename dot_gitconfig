@@ -1,60 +1,60 @@
 [include]
-    path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 
 [core]
-	editor = code --wait
-	autocrlf = input
-	pager = less -FRX
-	whitespace = trailing-space,space-before-tab
+  editor = code --wait
+  autocrlf = input
+  pager = less -FRX
+  whitespace = trailing-space,space-before-tab
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [pull]
-	rebase = true
+  rebase = true
 
 [push]
-	default = current
-	autoSetupRemote = true
-	followTags = true
+  default = current
+  autoSetupRemote = true
+  followTags = true
 
 [fetch]
-	prune = true
-	pruneTags = true
+  prune = true
+  pruneTags = true
 
 [rebase]
-	autoStash = true
-	autoSquash = true
+  autoStash = true
+  autoSquash = true
 
 [merge]
-	conflictstyle = zdiff3
-	tool = code
+  conflictstyle = zdiff3
+  tool = code
 
 [diff]
-	algorithm = histogram
-	colorMoved = default
-	renames = copies
+  algorithm = histogram
+  colorMoved = default
+  renames = copies
 
 [rerere]
-	enabled = true
+  enabled = true
 
 [help]
-	autocorrect = prompt
+  autocorrect = prompt
 
 [alias]
-	st = status -sb
-	co = checkout
-	br = branch
-	ci = commit
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%ad%Creset %Cgreen[%an]%Creset %s %C(auto)%d%Creset' --date=short
-	amend = commit --amend --no-edit
-	wip = !git add -A && git commit -m 'WIP'
-	undo = reset --soft HEAD~1
+  st = status -sb
+  co = checkout
+  br = branch
+  ci = commit
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%ad%Creset %Cgreen[%an]%Creset %s %C(auto)%d%Creset' --date=short
+  amend = commit --amend --no-edit
+  wip = !git add -A && git commit -m 'WIP'
+  undo = reset --soft HEAD~1
 
 [color]
-	ui = auto
+  ui = auto
 
 [column]
-	ui = auto
+  ui = auto

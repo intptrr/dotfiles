@@ -93,6 +93,11 @@
 
   // MCP servers (add your servers here)
   "mcp": {
+    "exa": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/mcp",
+      "enabled": true
+    },
     "playwright": {
       "type": "local",
       "command": [
@@ -109,7 +114,7 @@
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp",
       "headers": {
-        "Authorization": "Bearer {env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+        "Authorization": "Bearer {env:GITHUB_TOKEN}"
       },
       "enabled": true
     },

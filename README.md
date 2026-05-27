@@ -65,6 +65,21 @@ Or, on a new machine without chezmoi installed, bootstrap everything in one step
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
 ```
 
+## Local Overrides
+
+Two untracked files in `$HOME` hold machine-specific or sensitive values. Example templates are included in this repo:
+
+- **`~/.gitconfig.local`** — git identity and any per-machine git overrides. Included from `~/.gitconfig` via the `[include]` directive. See [dot_gitconfig.local.example](dot_gitconfig.local.example).
+- **`~/.secrets`** — `KEY=value` lines auto-exported as environment variables by `~/.zshrc` (e.g. `GITHUB_TOKEN`, API keys). See [dot_secrets.example](dot_secrets.example).
+
+Copy each example into `$HOME` and fill in your values:
+
+```shell
+cp ~/.local/share/chezmoi/dot_gitconfig.local.example ~/.gitconfig.local
+cp ~/.local/share/chezmoi/dot_secrets.example ~/.secrets
+chmod 600 ~/.secrets
+```
+
 ## Common Workflows
 
 Edit a managed file and apply the change locally:
