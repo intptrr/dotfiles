@@ -1,0 +1,82 @@
+# Starship prompt configuration
+# https://starship.rs/config/
+
+add_newline = true
+command_timeout = 1000
+
+format = """
+[#](bold red) $username[@](bold green)$hostname $directory$git_branch$git_status$git_state$time
+$character"""
+
+[character]
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"
+vicmd_symbol = "[:](bold yellow)"
+
+[username]
+style_user = "bold yellow"
+style_root = "bold red"
+format = "[$user]($style)"
+show_always = true
+disabled = false
+
+[hostname]
+ssh_only = false
+style = "bold cyan"
+format = "[$hostname]($style)"
+disabled = false
+
+[directory]
+style = "bold blue"
+truncation_length = 4
+truncation_symbol = "…/"
+truncate_to_repo = false
+read_only = " "
+
+[git_branch]
+style = "bold magenta"
+format = "on [$branch]($style) "
+
+[git_status]
+style = "bold red"
+format = '([$all_status$ahead_behind]($style) )'
+conflicted = "="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+untracked = "?"
+stashed = "\\$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](bold yellow) "
+
+[time]
+disabled = false
+use_12hr = false
+time_format = "%H:%M:%S"
+style = "bold white"
+format = "\\[[$time]($style)\\]"
+
+[nodejs]
+symbol = " "
+format = "via [$symbol($version )]($style)"
+
+[python]
+symbol = " "
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[rust]
+symbol = " "
+format = "via [$symbol($version )]($style)"
+
+[golang]
+symbol = " "
+format = "via [$symbol($version )]($style)"
+
+[package]
+disabled = true
