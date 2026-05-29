@@ -58,6 +58,17 @@ if command -v eza >/dev/null 2>&1; then
   alias l='eza -1   --group-directories-first'
 fi
 
+# ---- bat (modern cat) ----
+if command -v bat >/dev/null 2>&1; then
+  alias cat='bat --paging=never'
+fi
+
+# ---- zoxide (smarter cd) ----
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+  alias cd='z'
+fi
+
 # ---- secrets ----
 if [ -f "$HOME/.secrets" ]; then
   set -a
