@@ -1,82 +1,82 @@
 # Starship prompt configuration
-# https://starship.rs/config/
+# Docs: https://starship.rs/config/
+
+"$schema" = "https://starship.rs/config-schema.json"
 
 add_newline = true
 command_timeout = 1000
+palette = "default"
 
 format = """
-[#](bold red) $username[@](bold green)$hostname $directory$git_branch$git_status$git_state$time
+[#](bold blue) $username @ $hostname $directory$git_branch$git_status$custom$git_state$time
 $character"""
 
-[character]
-success_symbol = "[\\$](bold green)"
-error_symbol = "[\\$](bold red)"
-vicmd_symbol = "[:](bold yellow)"
+[palettes.default]
+prompt   = "red"
+user     = "cyan"
+host     = "green"
+path     = "yellow"
+branch   = "cyan"
+dirty    = "red"
+clean    = "green"
+time     = "white"
 
+# ---- prompt character ----
+[character]
+success_symbol = "[\\$](bold prompt)"
+error_symbol   = "[\\$](bold prompt)"
+vicmd_symbol   = "[\\$](bold prompt)"
+
+# ---- identity ----
 [username]
-style_user = "bold yellow"
-style_root = "bold red"
-format = "[$user]($style)"
 show_always = true
-disabled = false
+style_user  = "bold user"
+format      = "[$user]($style)"
 
 [hostname]
 ssh_only = false
-style = "bold cyan"
-format = "[$hostname]($style)"
-disabled = false
+style    = "bold host"
+format   = "[$hostname]($style)"
 
+# ---- location ----
 [directory]
-style = "bold blue"
+style             = "bold path"
 truncation_length = 4
 truncation_symbol = "…/"
-truncate_to_repo = false
-read_only = " "
+truncate_to_repo  = false
+read_only         = " "
 
+# ---- git ----
 [git_branch]
-style = "bold magenta"
+style  = "bold branch"
 format = "on [$branch]($style) "
 
 [git_status]
-style = "bold red"
-format = '([$all_status$ahead_behind]($style) )'
-conflicted = "="
-ahead = "⇡"
-behind = "⇣"
-diverged = "⇕"
-untracked = "?"
-stashed = "\\$"
-modified = "!"
-staged = "+"
-renamed = "»"
-deleted = "✘"
+style        = "bold dirty"
+format       = '([$all_status$ahead_behind]($style) )'
+conflicted   = "="
+ahead        = "⇡"
+behind       = "⇣"
+diverged     = "⇕"
+untracked    = "?"
+stashed      = "\\$"
+modified     = "!"
+staged       = "+"
+renamed      = "»"
+deleted      = "✘"
 
-[cmd_duration]
-min_time = 2000
-format = "took [$duration](bold yellow) "
+[custom.git_clean]
+description  = "Show ✓ when working tree is clean and synced with remote"
+require_repo = true
+command      = "echo ✓"
+when         = 'test -z "$(git status --porcelain)" && git diff --quiet @{u}..'
+style        = "bold clean"
+format       = "[$output]($style) "
 
+# ---- metadata ----
 [time]
-disabled = false
-use_12hr = false
+disabled    = false
+use_12hr    = false
 time_format = "%H:%M:%S"
-style = "bold white"
-format = "\\[[$time]($style)\\]"
-
-[nodejs]
-symbol = " "
-format = "via [$symbol($version )]($style)"
-
-[python]
-symbol = " "
-format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-
-[rust]
-symbol = " "
-format = "via [$symbol($version )]($style)"
-
-[golang]
-symbol = " "
-format = "via [$symbol($version )]($style)"
-
-[package]
-disabled = true
+style       = "bold time"
+format      = "\\[[$time]($style)\\]"
