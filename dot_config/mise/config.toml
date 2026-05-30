@@ -1,0 +1,10 @@
+# mise tool versions — https://mise.jdx.dev/configuration.html
+[tools]
+python = "latest"  # latest stable CPython release
+node = "lts"       # current Node.js LTS line
+go = "latest"      # latest stable Go toolchain
+rust = "stable"    # Rust stable channel
+
+# Tools installed via the aqua backend (https://aquaproj.github.io)
+"aqua:astral-sh/uv" = "latest"  # uv — fast Python package/project manager
+"aqua:pnpm/pnpm" = "latest"     # pnpm — fast, disk-efficient Node package manager
