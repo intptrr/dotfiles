@@ -8,3 +8,4 @@ rust = "stable"    # Rust stable channel
 # Tools installed via the aqua backend (https://aquaproj.github.io)
 "aqua:astral-sh/uv" = "latest"  # uv — fast Python package/project manager
 "aqua:pnpm/pnpm" = "latest"     # pnpm — fast, disk-efficient Node package manager
+"aqua:kubernetes/kubectl" = "latest"  # kubectl — Kubernetes command-line tool
