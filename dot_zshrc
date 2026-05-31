@@ -11,6 +11,9 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 export SUDO_EDITOR=$VISUAL
 
+# local bin
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+
 # opencode
 [ -d "$HOME/.opencode/bin" ] && export PATH="$HOME/.opencode/bin:$PATH"
 
