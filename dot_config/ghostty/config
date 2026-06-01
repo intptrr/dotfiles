@@ -2,7 +2,7 @@
 # Docs: https://ghostty.org/docs/config/reference
 
 # Appearance
-theme = Tokyonight
+theme = TokyoNight
 font-size = 12
 background-opacity = 0.88
 background-blur = true
