@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Node / opencode plugins
+node_modules/
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Local secrets (never commit real ones; *.example files are kept)
+dot_secrets
+dot_gitconfig.local
+
+# Logs and temp
+*.log
+*.tmp

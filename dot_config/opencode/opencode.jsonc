@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-
   // Permissions — moderate: allow reads, ask before writes/bash
   "permission": {
     "read": "allow",
@@ -10,7 +9,6 @@
     "edit": "ask",
     "bash": {
       "*": "ask",
-
       // Filesystem inspection
       "ls": "allow",
       "ls *": "allow",
@@ -23,7 +21,6 @@
       "tree": "allow",
       "tree *": "allow",
       "realpath *": "allow",
-
       // Search
       "rg": "allow",
       "rg *": "allow",
@@ -31,7 +28,6 @@
       "fd *": "allow",
       "find *": "allow",
       "grep *": "allow",
-
       // Text inspection
       "echo *": "allow",
       "sort *": "allow",
@@ -40,14 +36,12 @@
       "sed -n *": "allow",
       "diff *": "allow",
       "jq *": "allow",
-
       // Environment / system info
       "env": "allow",
       "printenv *": "allow",
       "which *": "allow",
       "command -v *": "allow",
       "type *": "allow",
-
       // Git read-only
       "git status": "allow",
       "git status *": "allow",
@@ -67,7 +61,6 @@
       "git ls-files *": "allow",
       "git tag": "allow",
       "git stash list": "allow",
-
       // Package manager read-only
       "npm ls *": "allow",
       "npm view *": "allow",
@@ -78,19 +71,15 @@
     "webfetch": "allow",
     "websearch": "allow"
   },
-
   // Enable LSP for diagnostics & go-to-definition
   "lsp": true,
-
   // Enable code formatters
   "formatter": true,
-
   // Context compaction
   "compaction": {
     "auto": true,
     "prune": true
   },
-
   // MCP servers (add your servers here)
   "mcp": {
     "exa": {
@@ -108,7 +97,11 @@
     },
     "chrome-devtools": {
       "type": "local",
-      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
     },
     "github": {
       "type": "remote",
@@ -127,12 +120,15 @@
       "enabled": true
     }
   },
-
   // Custom instructions (add paths to project guidelines, etc.)
   "instructions": [],
-
   // File watcher — ignore noisy dirs
   "watcher": {
-    "ignore": ["node_modules/**", "dist/**", ".git/**", "build/**"]
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      ".git/**",
+      "build/**"
+    ]
   }
 }
