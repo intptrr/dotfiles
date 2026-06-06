@@ -29,7 +29,8 @@ overrides them.
 - Types: `feat`, `fix`, `chore`, `refactor`, `docs`, `test`, `perf`, `style`, `ci`.
 - Scope is the affected component; omit it if it doesn't fit.
 - Subject is lowercase, imperative, no trailing period, under ~72 chars.
-- One logical change per commit. Explain *why* in the body only when non-obvious.
+- One logical change per commit. The body is optional but recommended for
+  significant changes; use it to explain *why*, not *what*.
 
 ## Safety
 
