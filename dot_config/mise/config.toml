@@ -9,3 +9,4 @@ rust = "stable"    # Rust stable channel
 "aqua:astral-sh/uv" = "latest"  # uv — fast Python package/project manager
 "aqua:pnpm/pnpm" = "latest"     # pnpm — fast, disk-efficient Node package manager
 "aqua:kubernetes/kubectl" = "latest"  # kubectl — Kubernetes command-line tool
+"aqua:opentofu/opentofu" = "latest"  # OpenTofu — open-source Terraform alternative
