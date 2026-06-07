@@ -56,13 +56,13 @@ sudo mv ./bin/chezmoi /usr/local/bin/
 Initialize and apply directly:
 
 ```shell
-chezmoi init --apply $GITHUB_USERNAME
+chezmoi init --ssh --apply $GITHUB_USERNAME
 ```
 
 Or, on a new machine without chezmoi installed, bootstrap everything in one step (downloads the binary, then initializes and applies):
 
 ```shell
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --ssh --apply $GITHUB_USERNAME
 ```
 
 ## Local Overrides
