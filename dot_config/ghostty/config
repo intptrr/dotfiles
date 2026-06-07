@@ -24,6 +24,10 @@ copy-on-select = clipboard
 confirm-close-surface = false
 mouse-hide-while-typing = true
 
+# Keybindings
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+
 # macOS
 macos-option-as-alt = true
 macos-titlebar-style = transparent
