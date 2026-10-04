@@ -25,6 +25,9 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000
 SAVEHIST=100000
 
+# zsh switches to vi mode when $VISUAL/$EDITOR contains "vi", so pin emacs keys
+bindkey -e
+
 # ---- starship prompt ----
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
