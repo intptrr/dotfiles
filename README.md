@@ -10,6 +10,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/) for syncing co
 - **git** — sane defaults (rebase on pull, autosquash, `zdiff3` conflict style, histogram diffs, `rerere`), handy aliases (`st`, `lg`, `wip`, `undo`, …), and includes `~/.gitconfig.local` for machine-specific overrides (e.g. user name/email).
 - **neovim** — Lua config bootstrapped with [lazy.nvim](https://github.com/folke/lazy.nvim) and the [tokyonight](https://github.com/folke/tokyonight.nvim) colorscheme (night variant, transparent background).
 - **ghostty** *(macOS only)* — Tokyonight theme, semi-transparent background with blur, block cursor, 100k scrollback, option-as-alt, and transparent titlebar.
+- **zellij** — terminal multiplexer with the Tokyonight theme (`tokyo-night-dark`), full borders around every pane, and the Unlock-First keybinding preset so only `Ctrl g` is reserved (e.g. `Ctrl g` → `p` → `n` opens a new pane). On macOS, `Alt+h/j/k/l` and `Alt+f` go to yabai via skhd, so move between panes with `Ctrl g` → `p` → `h/j/k/l`.
 - **opencode** — [opencode](https://opencode.ai/) AI coding assistant config with formatters, auto-compaction, all permissions allowed, and MCP servers (Exa, Playwright, Chrome DevTools, GitHub, Context7), plus global agent guidelines (`AGENTS.md`) and opencode v2 terminal settings (`cli.json`, system theme). The GitHub and Context7 servers read `GITHUB_TOKEN` and `CONTEXT7_API_KEY` from `~/.secrets` (see [Local Overrides](#local-overrides)).
 - **yabai** *(macOS only)* — bsp tiling layout, 10pt gaps/padding, `fn` as the mouse modifier.
 - **skhd** *(macOS only)* — a hotkey to open Ghostty, window focus/swap (`alt+hjkl`, `shift+alt+hjkl`), float/zoom toggles, and space focus/move bindings (`cmd+alt+<n>`, `shift+cmd+<n>`). See the [keybindings reference](dot_config/yabai/README.md).
@@ -32,6 +33,7 @@ eza
 bat
 zoxide
 opencode
+zellij
 
 # optional, macOS only
 ghostty
