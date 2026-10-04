@@ -2,14 +2,11 @@
   "$schema": "https://opencode.ai/config.json",
   // Permissions — allow everything
   "permission": "allow",
-  // Enable LSP for diagnostics & go-to-definition
-  "lsp": true,
   // Enable code formatters
   "formatter": true,
   // Context compaction
   "compaction": {
-    "auto": true,
-    "prune": true
+    "auto": true
   },
   // MCP servers (add your servers here)
   "mcp": {
