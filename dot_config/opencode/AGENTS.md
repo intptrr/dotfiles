@@ -19,9 +19,11 @@ overrides them.
 ## Code quality
 
 - No commented-out code, dead code, or leftover debug logging.
-- Handle errors explicitly; don't swallow them silently.
+- Don't add try/catch (or equivalent) unless the error is actually handled
+  locally; let it propagate instead. Never swallow errors silently.
 - Keep functions small and names descriptive.
-- Add comments only to explain *why*, not *what*.
+- No comments unless the code is genuinely non-obvious. When needed, keep them
+  concise and explain *why*, not *what*.
 
 ## Commit messages
 
