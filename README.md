@@ -4,13 +4,15 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/) for syncing co
 
 ## What's Included
 
-- **zsh** — `zinit`-managed setup with the `starship` prompt, `zsh-autosuggestions`, `zsh-completions`, and `fast-syntax-highlighting` (auto-installed on first shell start). Includes safety aliases (`rm -I`, `cp -i`, `mv -i`), shortcuts, and `nvm` loader.
+- **zsh** — `zinit`-managed setup with the `starship` prompt, `zsh-autosuggestions`, `zsh-completions`, and `fast-syntax-highlighting` (auto-installed on first shell start). Includes emacs keybindings, safety aliases (`cp -i`, `mv -i`), shortcuts, `eza`/`bat`/`zoxide` replacements for `ls`/`cat`/`cd` (when installed), and `mise` activation.
+- **starship** — prompt showing user, host, directory, git branch/status (`✓` when the tree is clean and in sync with upstream), and time.
+- **mise** — global tool versions: Python, Node.js (LTS), Go, Rust (stable), plus `uv`, `pnpm`, `kubectl`, and OpenTofu via the aqua backend.
 - **git** — sane defaults (rebase on pull, autosquash, `zdiff3` conflict style, histogram diffs, `rerere`), handy aliases (`st`, `lg`, `wip`, `undo`, …), and includes `~/.gitconfig.local` for machine-specific overrides (e.g. user name/email).
 - **neovim** — Lua config bootstrapped with [lazy.nvim](https://github.com/folke/lazy.nvim) and the [tokyonight](https://github.com/folke/tokyonight.nvim) colorscheme (night variant, transparent background).
 - **ghostty** *(macOS only)* — Tokyonight theme, semi-transparent background with blur, block cursor, 100k scrollback, option-as-alt, and transparent titlebar.
-- **opencode** — [opencode](https://opencode.ai/) AI coding assistant config with LSP and formatter support, system theme TUI, and granular permission controls (read/search allowed, edit/bash require confirmation).
+- **opencode** — [opencode](https://opencode.ai/) AI coding assistant config with formatters, auto-compaction, all permissions allowed, and MCP servers (Exa, Playwright, Chrome DevTools, GitHub, Context7), plus global agent guidelines (`AGENTS.md`) and opencode v2 terminal settings (`cli.json`, system theme). The GitHub and Context7 servers read `GITHUB_TOKEN` and `CONTEXT7_API_KEY` from `~/.secrets` (see [Local Overrides](#local-overrides)).
 - **yabai** *(macOS only)* — bsp tiling layout, 10pt gaps/padding, `fn` as the mouse modifier.
-- **skhd** *(macOS only)* — hotkeys for iTerm, window float/zoom toggles, and space focus/move bindings (`cmd+alt+<n>`, `shift+cmd+<n>`).
+- **skhd** *(macOS only)* — a hotkey to open Ghostty, window focus/swap (`alt+hjkl`, `shift+alt+hjkl`), float/zoom toggles, and space focus/move bindings (`cmd+alt+<n>`, `shift+cmd+<n>`). See the [keybindings reference](dot_config/yabai/README.md).
 
 The macOS-only configs (`ghostty`, `yabai`, `skhd`) are skipped automatically on other platforms via `.chezmoiignore`.
 
@@ -24,6 +26,11 @@ zsh
 neovim
 
 # optional
+starship
+mise
+eza
+bat
+zoxide
 opencode
 
 # optional, macOS only
