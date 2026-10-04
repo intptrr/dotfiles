@@ -7,7 +7,8 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/) for syncing co
 - **zsh** — `zinit`-managed setup with the `starship` prompt, `zsh-autosuggestions`, `zsh-completions`, and `fast-syntax-highlighting` (auto-installed on first shell start). Includes emacs keybindings, safety aliases (`cp -i`, `mv -i`), shortcuts, `eza`/`bat`/`zoxide` replacements for `ls`/`cat`/`cd` (when installed), and `mise` activation.
 - **starship** — prompt showing user, host, directory, git branch/status (`✓` when the tree is clean and in sync with upstream), and time.
 - **mise** — global tool versions: Python, Node.js (LTS), Go, Rust (stable), plus `uv`, `pnpm`, `kubectl`, and OpenTofu via the aqua backend.
-- **git** — sane defaults (rebase on pull, autosquash, `zdiff3` conflict style, histogram diffs, `rerere`), handy aliases (`st`, `lg`, `wip`, `undo`, …), and includes `~/.gitconfig.local` for machine-specific overrides (e.g. user name/email).
+- **git** — sane defaults (rebase on pull, autosquash, `zdiff3` conflict style, histogram diffs, `rerere`), [delta](https://github.com/dandavison/delta) as the pager when installed at `chezmoi apply` time (side-by-side, line numbers, Tokyonight colors, `n`/`N` to jump between files), handy aliases (`st`, `lg`, `wip`, `undo`, …), and includes `~/.gitconfig.local` for machine-specific overrides (e.g. user name/email).
+- **lazygit** — renders diffs with delta using the same settings as git (when delta is installed). `~/.zshrc` sets `LG_CONFIG_FILE` so macOS also reads the config from `~/.config/lazygit`.
 - **neovim** — Lua config bootstrapped with [lazy.nvim](https://github.com/folke/lazy.nvim) and the [tokyonight](https://github.com/folke/tokyonight.nvim) colorscheme (night variant, transparent background).
 - **ghostty** *(macOS only)* — Tokyonight theme, semi-transparent background with blur, block cursor, 100k scrollback, option-as-alt, and transparent titlebar.
 - **zellij** — terminal multiplexer with the Tokyonight theme (`tokyo-night-dark`), full borders around every pane, and the Unlock-First keybinding preset so only `Ctrl g` is reserved (e.g. `Ctrl g` → `p` → `n` opens a new pane). On macOS, `Alt+h/j/k/l` and `Alt+f` go to yabai via skhd, so move between panes with `Ctrl g` → `p` → `h/j/k/l`.
@@ -34,6 +35,8 @@ bat
 zoxide
 opencode
 zellij
+git-delta
+lazygit
 
 # optional, macOS only
 ghostty
