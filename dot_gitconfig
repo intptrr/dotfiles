@@ -28,7 +28,7 @@
 
 [merge]
   conflictstyle = zdiff3
-  tool = code
+  tool = vscode
 
 [diff]
   algorithm = histogram
