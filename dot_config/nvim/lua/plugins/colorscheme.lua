@@ -1,15 +1,18 @@
 return {
   {
     "folke/tokyonight.nvim",
-    lazy = false,    -- Load this immediately on startup
-    priority = 1000, -- Make sure it loads before other plugins
-    config = function()
-      -- Optional: Ensure your terminal background remains transparent 
+    opts = {
+      -- Optional: Ensure your terminal background remains transparent
       -- if you configured background-opacity in Ghostty
-      require("tokyonight").setup({ transparent = true })
-
+      transparent = true,
       -- Set the variant
-      vim.cmd([[colorscheme tokyonight-night]])
-    end,
+      style = "night",
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "tokyonight-night",
+    },
   },
 }
