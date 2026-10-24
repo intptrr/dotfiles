@@ -2,21 +2,21 @@
 
 Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/) for syncing configuration across machines.
 
-## What's Included
+## Tools
 
-- **zsh** — `zinit`-managed setup with the `starship` prompt, `zsh-autosuggestions`, `zsh-completions`, and `fast-syntax-highlighting` (auto-installed on first shell start). Includes emacs keybindings, safety aliases (`cp -i`, `mv -i`), shortcuts, `eza`/`bat`/`zoxide` replacements for `ls`/`cat`/`cd` (when installed), and `mise` activation.
-- **starship** — prompt showing user, host, directory, git branch/status (`✓` when the tree is clean and in sync with upstream), and time.
-- **mise** — global tool versions: Python, Node.js (LTS), Go, Rust (stable), plus `uv`, `pnpm`, `kubectl`, OpenTofu, `ripgrep`, `fd`, and `tree-sitter` via the aqua backend.
-- **git** — sane defaults (rebase on pull, autosquash, `zdiff3` conflict style, histogram diffs, `rerere`), [delta](https://github.com/dandavison/delta) as the pager when installed at `chezmoi apply` time (side-by-side, line numbers, Tokyonight colors, `n`/`N` to jump between files), handy aliases (`st`, `lg`, `wip`, `undo`, …), and includes `~/.gitconfig.local` for machine-specific overrides (e.g. user name/email).
-- **lazygit** — renders diffs with delta using the same settings as git (when delta is installed). `~/.zshrc` sets `LG_CONFIG_FILE` so macOS also reads the config from `~/.config/lazygit`.
-- **neovim** — [LazyVim](https://www.lazyvim.org/) with the [tokyonight](https://github.com/folke/tokyonight.nvim) colorscheme (night variant, transparent background).
-- **ghostty** *(macOS only)* — Tokyonight theme, semi-transparent background with blur, block cursor, 100k scrollback, option-as-alt, and transparent titlebar.
-- **zellij** — terminal multiplexer with the Tokyonight theme (`tokyo-night-dark`), full borders around every pane, and the Unlock-First keybinding preset so only `Ctrl g` is reserved (e.g. `Ctrl g` → `p` → `n` opens a new pane). On macOS, `Alt+h/j/k/l` and `Alt+f` go to yabai via skhd, so move between panes with `Ctrl g` → `p` → `h/j/k/l`.
-- **opencode** — [opencode](https://opencode.ai/) AI coding assistant config with formatters, auto-compaction, all permissions allowed, and MCP servers (Exa, Playwright, Chrome DevTools, GitHub, Context7), plus global agent guidelines (`AGENTS.md`) and opencode v2 terminal settings (`cli.json`, system theme). The GitHub and Context7 servers read `GITHUB_TOKEN` and `CONTEXT7_API_KEY` from `~/.secrets` (see [Local Overrides](#local-overrides)).
-- **yabai** *(macOS only)* — bsp tiling layout, 10pt gaps/padding, `fn` as the mouse modifier.
-- **skhd** *(macOS only)* — a hotkey to open Ghostty, window focus/swap (`alt+hjkl`, `shift+alt+hjkl`), float/zoom toggles, and space focus/move bindings (`cmd+alt+<n>`, `shift+cmd+<n>`). See the [keybindings reference](dot_config/yabai/README.md).
+- **zsh** — zinit plugins, starship prompt, `eza`/`bat`/`zoxide` aliases, and mise activation.
+- **starship** — prompt with directory, git status, and time.
+- **mise** — Python, Node.js, Go, Rust, and CLI tools (`uv`, `pnpm`, `kubectl`, OpenTofu, `ripgrep`, `fd`, `tree-sitter`).
+- **git** — sane defaults, aliases, and [delta](https://github.com/dandavison/delta) as the pager.
+- **lazygit** — diffs rendered with delta.
+- **neovim** — [LazyVim](https://www.lazyvim.org/) with the tokyonight colorscheme.
+- **ghostty** *(macOS only)* — Tokyonight theme with a translucent, blurred background.
+- **zellij** — Tokyonight theme and Unlock-First keybindings (`Ctrl g` to unlock).
+- **opencode** — config, MCP servers, and global `AGENTS.md`; tokens come from `~/.secrets` (see [Local Overrides](#local-overrides)).
+- **yabai** *(macOS only)* — bsp tiling with 10pt gaps.
+- **skhd** *(macOS only)* — hotkeys for yabai windows and spaces ([keybindings](dot_config/yabai/README.md)).
 
-The macOS-only configs (`ghostty`, `yabai`, `skhd`) are skipped automatically on other platforms via `.chezmoiignore`.
+macOS-only configs are skipped on other platforms via `.chezmoiignore`.
 
 ## Requirements
 
