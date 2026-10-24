@@ -10,3 +10,6 @@ rust = "stable"    # Rust stable channel
 "aqua:pnpm/pnpm" = "latest"     # pnpm — fast, disk-efficient Node package manager
 "aqua:kubernetes/kubectl" = "latest"  # kubectl — Kubernetes command-line tool
 "aqua:opentofu/opentofu" = "latest"  # OpenTofu — open-source Terraform alternative
+"aqua:tree-sitter/tree-sitter" = "latest"  # tree-sitter — parser generator CLI, needed by nvim-treesitter to build parsers
+"aqua:BurntSushi/ripgrep" = "latest"  # ripgrep — fast recursive text search, used by LazyVim's grep
+"aqua:sharkdp/fd" = "latest"  # fd — fast file finder, used by LazyVim's file picker
